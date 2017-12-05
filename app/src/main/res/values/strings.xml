@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Bus Artery Driver</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_login">Log in</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="usernameHint">Username</string>
+    <string name="passwordHint">Password</string>
+    <string name="button_log_in">Log in</string>
+    <string name="busnum">Bus number: </string>
+    <string name="driverName">Driver name:</string>
+    <string name="new_password">New password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="change_password">Change password</string>
+    <string name="old_password">Old password</string>
+</resources>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/btnStartStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Drive" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_distance" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="0 km" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_clock" />
+
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="0 min" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutUnload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="350dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/lightBlue"
+            android:layout_marginRight="5dp"
+            android:text="Unload All" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_unload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="unload"
+            android:scaleType="center"
+            android:src="@drawable/fab_unload"
+            app:backgroundTint="@color/veryLightBlue"
+            app:pressedTranslationZ="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="280dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/lightBlue"
+            android:layout_marginRight="5dp"
+            android:text="Deduct" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_minus_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="deductPassenger"
+            android:scaleType="center"
+            android:src="@drawable/fab_minus"
+            app:backgroundTint="@color/veryLightBlue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="210dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/lightBlue"
+            android:layout_marginRight="5dp"
+            android:text="Add" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_add_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addPassenger"
+            android:scaleType="center"
+            android:src="@drawable/fab_add"
+            app:backgroundTint="@color/veryLightBlue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutVacancy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="140dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/lightBlue"
+            android:layout_marginRight="5dp"
+            android:text="Vacancy" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_num_vacancy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="numberOfVacancy"
+            android:scaleType="center"
+            android:src="@drawable/fab_vacancy"
+            app:backgroundTint="@color/veryLightBlue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutNumpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="70dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/lightBlue"
+            android:layout_marginRight="5dp"
+            android:text="Total number\n of passengers" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_num_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:onClick="numPass"
+            android:scaleType="center"
+            android:src="@drawable/fab_numpass"
+            app:backgroundTint="@color/veryLightBlue" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_showMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:scaleType="center"
+        android:src="@drawable/user_logo"
+        app:backgroundTint="@color/veryLightBlue"
+        app:srcCompat="@android:drawable/ic_input_add" />
+</android.support.design.widget.CoordinatorLayout>

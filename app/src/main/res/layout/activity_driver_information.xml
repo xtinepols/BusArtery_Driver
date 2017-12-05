@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightBlue"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="70dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+
+                            android:orientation="vertical"
+                            android:paddingTop="30dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Driver's Name"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/driver_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:text="Driver's Name"
+                                android:textColor="@color/darkestBlue"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Username"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:text="Username"
+                                android:textColor="@color/darkestBlue"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Age"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/age"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:text="Age"
+                                android:textColor="@color/darkestBlue"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Bus Number"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/bus_num"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:text="Bus Number"
+                                android:textColor="@color/darkestBlue"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Bus Type"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/bus_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:text="Bus Type"
+                                android:textColor="@color/darkestBlue"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Company Name"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/com_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:text="Company NAme"
+                                android:textColor="@color/darkestBlue"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Route"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/route"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:text="Route"
+                                android:textColor="@color/darkestBlue"
+                                android:textSize="20dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Capacity"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/capacity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="40dp"
+                                android:text="Route"
+                                android:textColor="@color/darkestBlue"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/user_profile_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape"
+                android:src="@drawable/busdriver" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
